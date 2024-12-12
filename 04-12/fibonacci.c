@@ -2,20 +2,19 @@
 
 int fib(int n) {
 
-  if (n < 2) 
+  if (n <= 2)  // caso base
     return 1;
-  else {
-    int fnminus1 = fib(n - 1);
-    int fnminus2 = fib(n - 2);
-    return fnminus1 + fnminus2;
+  else { // caso geral 
+    int result = fib(n - 1) + fib(n - 2);
+    return result;
   } 
-
 }
 
 int main(void) {
   setbuf(stdout, NULL);
 
-  pr
+  int n = 6;
+  printf("Fib(%d) = %d\n", n, fib(n));
 
   return 0;
 }
